@@ -6,30 +6,30 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace MusicRama.Models
 {
-    public class User
+    public class Song
     {
 
-        public User()
+        public Song ()
         {
-            Uploads = new List<Song>();
+
         }
 
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [StringLength(30)]
-        public string Username { get; set; }
+        public string Artist { get; set; }
 
         [Required]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string Name { get; set; }
 
+        [Required]
+        [StringLength (150)]
+        public string Description { get; set; }
 
-        public ICollection<Song> Uploads { get; set; }
-
+        [Required]
+        public DateTime Date { get; set; }
     }
 }
