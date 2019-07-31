@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MusicRama.Models.User>
+
+@{ 
+    ViewBag.Title = "Index";
+}
+
+<h2>User</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary"})
+</p>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+    </tr>
+
+    @foreach  (var item in Model){
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id}, new {@class = "btn btn-success" })                
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id}, new {onclick = $"return confirm('{item.Username} will be permanently deleted. Are you sure?');",@class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
