@@ -140,6 +140,10 @@
     <Compile Include="Migrations\201907311409330_first.Designer.cs">
       <DependentUpon>201907311409330_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908011747256_second.cs" />
+    <Compile Include="Migrations\201908011747256_second.Designer.cs">
+      <DependentUpon>201908011747256_second.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Song.cs" />
@@ -222,6 +226,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201907311409330_first.resx">
       <DependentUpon>201907311409330_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908011747256_second.resx">
+      <DependentUpon>201908011747256_second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

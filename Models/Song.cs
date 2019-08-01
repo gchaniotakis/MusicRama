@@ -31,5 +31,14 @@ namespace MusicRama.Models
 
         [Required]
         public DateTime Date { get; set; }
+
+        [Required]
+        public int Likes { get; set; }
+        [Required]
+        public int Hates { get; set; }
+
+        [ForeignKey("User")]
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }

@@ -31,6 +31,8 @@ namespace MusicRama.Controllers
         public ActionResult Create([Bind(Include = "Id,Artist,Name,Description,Date")] Song song)
         {
             song.Date = DateTime.Now;
+            song.Likes = 0;
+            song.Hates = 0;
             db.Songs.Add(song);
             db.SaveChanges();
             return RedirectToAction("Index");
